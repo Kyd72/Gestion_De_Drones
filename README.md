@@ -1,6 +1,6 @@
 # Gestion_De_Drones
 
-Les drones
+# Les drones
 On désire simuler la surveillance d'un terrain par une colonie de drones.
 
 Par mesure de simplification le terrain est modélisé par un rectangle de N x N cellules (10 < N < 100).
@@ -19,7 +19,7 @@ Enfin, un drone possède une adresse MAC (on supposera que c'est un entier compr
 
 Pour plus de facilité, c’est ce dernier qui est utilisé pour les commandes.
 
-ÉTAPE 1 : MODELISATION DES DRONES
+# ÉTAPE 1 : MODELISATION DES DRONES
 Écrire les classes pour modéliser les drones terrestres et aériens : Drone, DroneAerien, DroneTerrestre.
 
 À sa création, un drone est placé aléatoirement sur une des 100 premières cases (n° ligne entre 0 et 9 et n° de colonne entre 0 et 9).
@@ -29,7 +29,7 @@ En plus des getters, setters et constructeurs on devra pouvoir déplacer un dron
 
 Indication : vous pouvez aussi écrire une classe Case qui modélise une case du terrain.
 
-ÉTAPE 2 : MODELISATION DE LA COLONIE
+# ÉTAPE 2 : MODELISATION DE LA COLONIE
 Écrire la classe Colonie qui modélise la surveillance d’une colonie de drones.
 
 Un tableau de drones et la taille de la zone à surveiller sont donnés à la création.
@@ -46,7 +46,7 @@ La classe Colonie doit proposer les méthodes suivantes :
 
 • getOccupation) : retourne les cases du terrain qui sont occupées (un case occupée par plusieurs drones ne sera citée qu'une fois)
 
-ÉTAPE 3: AMELIORATION
+# ÉTAPE 3: AMELIORATION
 Ajouter le code pour vérifier que le déplacement d’un drone est conforme au déplacement autorisé (saut d'une case horizontalement, verticalement ou en diagonale pour un drone terrestre / saut de deux cases horizontalement, ou verticalement pour un drone aérien).
 
 Ajouter le code pour vérifier que le drone ne sort pas du terrain.
