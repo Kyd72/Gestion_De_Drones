@@ -82,6 +82,6 @@ abstract class Drone {
 
     }
 
-    protected abstract void seDeplacer(int ligne, int colonne);
+    protected abstract void seDeplacer(int ligne, int colonne) throws Exception;
 
 }

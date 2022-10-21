@@ -6,13 +6,21 @@ class Colonie {
  private ArrayList<Drone>drones=new ArrayList<>();
  private Terrain terrainActuel;
 
- public Colonie(Drone[] drones, Terrain terrainActuel) {
+ public Colonie(Drone[] drones, Terrain terrainActuel) throws Exception {
   this.terrainActuel = terrainActuel;
 
-  for (int i =0; i<=drones.length-1;i++){
+   if (drones != null && drones.length>0){
+     for (int i =0; i<=drones.length-1;i++){
    drones[i].setTerrain(this.terrainActuel);
   }
   this.drones.addAll(List.of(drones));
+   }
+
+   else {
+     throw new Exception ("tableau de drones vide ou null") ;
+   }
+
+  
 
  }
 
@@ -40,9 +48,9 @@ class Colonie {
   return listeNom;
  }
 
- public ArrayList<String> getDeplacements (String nom){
+ public ArrayList<String> getDeplacements (String nom) throws Exception{
 
-  ArrayList<String>Deplacements= new ArrayList<>();
+  ArrayList<String>Deplacements= null;
   Iterator<Drone> it = drones.iterator();
 
   while (it.hasNext()){
@@ -50,11 +58,9 @@ class Colonie {
    if (d.getNomDuDrone().equals(nom)){
    Deplacements= d.getHistoriquePosition();
    }
-   else {
-
-   }
-
   }
+if (Deplacements==null)   throw new Exception ("Mauvais nom de drone");
+else
   return Deplacements;
  }
 
