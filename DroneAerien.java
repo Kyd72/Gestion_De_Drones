@@ -46,7 +46,7 @@
    @Override
     public String toString(){
 
-        return "Drone Aerien----Nom :"+this.nomDuDrone+"--------Hauteur de vol : "+this.hauteurDeVol+"--------Adresse:  "+this.positionActuelle+"-----------Historique: "+historiquePosition;
+        return "Drone Aerien---- Nom :"+this.nomDuDrone+" Hauteur de vol : "+this.hauteurDeVol+"-- Adresse:  "+this.positionActuelle+"-- Historique: "+historiquePosition;
 
     }
 

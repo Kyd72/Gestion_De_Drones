@@ -10,14 +10,14 @@ import java.util.ArrayList;
 
     // Constructeur
     public Terrain(){
-        for (int j =0;j<this.nombreDeLignes;j++) {
+       /* for (int j =0;j<this.nombreDeLignes;j++) {
             lignesTerrain.add(j);
 
         }
         for (int j =0;j<this.nombreDeColonnes;j++) {
             colonnesTerrain.add(j);
 
-        }
+        }*/
 
 
 

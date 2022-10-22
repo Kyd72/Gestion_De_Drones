@@ -20,7 +20,7 @@ abstract class Drone {
         this.adresseMac=compteurDeMac;
         this.terrainActuel = terrainActuel;
         compteurDeMac++;
-        positionInitiale=new Case(((int) (Math.random()* terrainActuel.getNombreDeLignes()))-1,((int) (Math.random()* terrainActuel.getNombreDeColonnes()))-1 );
+        positionInitiale=new Case(((int) (Math.random()* terrainActuel.getNombreDeLignes())),((int) (Math.random()* terrainActuel.getNombreDeColonnes())) );
         this.positionActuelle=positionInitiale;
         this.historiquePosition.add(positionActuelle.toString());
     }
@@ -29,9 +29,9 @@ abstract class Drone {
         this.nomDuDrone=nomDuDrone;
         this.adresseMac=compteurDeMac;
         compteurDeMac++;
-        positionInitiale=new Case(((int) (Math.random()*this.terrainActuel.getNombreDeLignes()))-1,((int) (Math.random()*this.terrainActuel.getNombreDeColonnes()))-1 );
+        positionInitiale=new Case(((int) (Math.random()*this.terrainActuel.getNombreDeLignes())),((int) (Math.random()*this.terrainActuel.getNombreDeColonnes())) );
         this.positionActuelle=positionInitiale;
-        this.historiquePosition.add(positionActuelle.toString()+"----"+this.terrainActuel.toString());
+        this.historiquePosition.add(positionActuelle.toString()+" sur terrain : "+this.terrainActuel.toString());
     }
 
 
@@ -68,8 +68,8 @@ abstract class Drone {
     protected void setTerrain( Terrain nouveauTerrain){
 
         this.terrainActuel =nouveauTerrain;
-        this.positionActuelle= new Case(0,0);
-        this.historiquePosition.add(positionActuelle.toString()+"----"+this.terrainActuel.toString());
+        this.positionActuelle= new Case(((int) (Math.random()* terrainActuel.getNombreDeLignes())),((int) (Math.random()* terrainActuel.getNombreDeColonnes())) );
+        this.historiquePosition.add(positionActuelle.toString()+" sur nouveau terrain : "+this.terrainActuel.toString());
 
         //déplacement en 0-0 à chaque changement de terrain et suppression de l'ancienne historique
         /*Iterator<String> i=historiquePosition.iterator();

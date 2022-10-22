@@ -34,7 +34,7 @@ private int coordColonne;
 
     @Override
     public String toString (){
-        return "Ligne: "+this.coordLigne+"---------Colonne : "+this.coordColonne;
+        return "( Ligne: "+this.coordLigne+")"+ "( Colonne : "+this.coordColonne+")";
     }
 
     @Override
