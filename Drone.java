@@ -15,7 +15,7 @@ abstract class Drone {
 
     //******** Constructeurs
 
-    protected Drone(String nomDuDrone, Terrain terrainActuel){
+    protected Drone(String nomDuDrone, Terrain terrainActuel) throws Exception{
         this.nomDuDrone=nomDuDrone;
         this.adresseMac=compteurDeMac;
         this.terrainActuel = terrainActuel;
@@ -25,7 +25,7 @@ abstract class Drone {
         this.historiquePosition.add(positionActuelle.toString());
     }
 
-    protected Drone(String nomDuDrone){
+    protected Drone(String nomDuDrone) throws  Exception{
         this.nomDuDrone=nomDuDrone;
         this.adresseMac=compteurDeMac;
         compteurDeMac++;

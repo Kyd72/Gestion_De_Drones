@@ -1,28 +1,29 @@
  class DroneAerien extends Drone {
 
     private static final int NOMBRE_DE_CASE_DEPLACEMENT = 2; // la distance de déplacement
-    private  double hauteurDeVol=2.5 ;
+    private  float hauteurDeVol= 2.5F;
 
 
 
 
     //Constructeur
-    public DroneAerien (String nomDuDrone, Terrain t) {
+    public DroneAerien (String nomDuDrone, Terrain t) throws Exception {
         super(nomDuDrone,t);
 
 
     }
 
-     public DroneAerien (String nomDuDrone){
+     public DroneAerien (String nomDuDrone) throws Exception{
          super(nomDuDrone);
 
 
      }
-     public DroneAerien (String nomDuDrone, Terrain t, double hauteurDeVol) throws Exception {
-       this(nomDuDrone,t);
-       if (hauteurDeVol>=0){
+     public DroneAerien (String nomDuDrone, Terrain t, float hauteurDeVol) throws Exception {
+         super(nomDuDrone,t);
+
+       if (hauteurDeVol>0){
          
-         this.hauteurDeVol=hauteurDeVol;
+         this.hauteurDeVol=  hauteurDeVol;
        }
        else {
          throw new Exception ("Hauteur de vol négative ou nulle");
@@ -30,7 +31,7 @@
          
      }
 
-     public DroneAerien (String nomDuDrone, double hauteurDeVol){
+     public DroneAerien (String nomDuDrone, float hauteurDeVol) throws Exception{
          this(nomDuDrone);
          this.hauteurDeVol=hauteurDeVol;
      }
