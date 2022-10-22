@@ -7,8 +7,8 @@ public class Main {
 
     
     try {
-       d1 = new DroneTerrestre("Wall-E1",  Roue.QUATRE); // nom  nbRoues
-       d2 = new DroneTerrestre("Wall-E2", Roue.QUATRE);
+       d1 = new DroneTerrestre("Wall-E1",  4); // nom  nbRoues
+       d2 = new DroneTerrestre("Wall-E2", 4);
       System.out.println(d1);
 
       // DroneTerrestre : {nom=Wall-E1, adresse=11, position=(9, 2), dep=[]}
@@ -78,7 +78,7 @@ public class Main {
            
     try {colo = new Colonie(new Drone[]{d1, d2, d3},new Terrain(20,20) ); // table de drones, terrain
 
-     colo.ajouterDrone(new DroneTerrestre("Wall-E3",  Roue.QUATRE));
+     colo.ajouterDrone(new DroneTerrestre("Wall-E3",  4));
         colo.ajouterDrone(new DroneAerien("Eve2", 22));
         colo.ajouterDrone(new DroneAerien("Eve3", 23));
 
@@ -112,49 +112,6 @@ public class Main {
       System.out.println(e);
     }
 
-     
-   
-
-    
-
-
-   
-
-
-    
-
-    
-
-
-    
-
-
-    
-
-     
-    
-    
-
-/* *********************************************
-    try {
-      
-    }
-
-    catch (Exception e){
-
-      System.out.println(e);
-    }
-
-*/ 
-   
-
-   
-
-
-
-
-   
-    
   }
 
 

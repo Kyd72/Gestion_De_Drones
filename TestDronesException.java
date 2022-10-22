@@ -4,7 +4,7 @@ public class TestDronesException {
 
         // TEST 1
         try {
-            DroneTerrestre d1 = new DroneTerrestre("Wall-E1", Roue.SIX);  // nom  nbRoues
+            DroneTerrestre d1 = new DroneTerrestre("Wall-E1", 3);  // nom  nbRoues
             System.out.println(d1);
 
             // TEST 4

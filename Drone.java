@@ -4,7 +4,7 @@ import java.util.ArrayList;
 abstract class Drone {
      Case positionActuelle;
     protected String nomDuDrone ;
-    protected static int compteurDeMac=0;
+    protected static int compteurDeMac=1;
     protected   int adresseMac;
 
     protected Case positionInitiale;

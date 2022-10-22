@@ -33,7 +33,16 @@
 
      public DroneAerien (String nomDuDrone, float hauteurDeVol) throws Exception{
          this(nomDuDrone);
-         this.hauteurDeVol=hauteurDeVol;
+
+
+         if (hauteurDeVol>0){
+
+             this.hauteurDeVol=  hauteurDeVol;
+         }
+         else {
+             throw new Exception ("Hauteur de vol négative ou nulle");
+         }
+
      }
 
 
@@ -47,7 +56,7 @@
    @Override
     public String toString(){
 
-        return "Drone Aerien---- Nom :"+this.nomDuDrone+" Hauteur de vol : "+this.hauteurDeVol+"-- Adresse:  "+this.positionActuelle+"-- Historique: "+historiquePosition;
+        return "Drone Aerien---- Nom :"+this.nomDuDrone+" Hauteur de vol : "+this.hauteurDeVol+"-- Position actuelle:  "+this.positionActuelle+" ---- Adresse MAC :"+super.adresseMac+"-- Historique: "+historiquePosition;
 
     }
 

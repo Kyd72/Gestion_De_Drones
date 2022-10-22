@@ -59,9 +59,9 @@ class Colonie {
    Deplacements= d.getHistoriquePosition();
    }
   }
-if (Deplacements==null)   throw new Exception ("Mauvais nom de drone");
-else
-  return Deplacements;
+  if (Deplacements==null)   throw new Exception ("Mauvais nom de drone");
+  else
+   return Deplacements;
  }
 
  public HashSet<String> getOccupation (){
